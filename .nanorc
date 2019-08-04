@@ -1,0 +1,14 @@
+set atblanks
+set autoindent
+set linenumbers
+#set mouse
+set tabsize 2
+set softwrap
+
+set functioncolor yellow,normal
+set keycolor green,normal
+set numbercolor brightred,black
+set selectedcolor red,normal
+set statuscolor cyan,normal
+set stripecolor brightgreen,normal
+set titlecolor magenta,normal

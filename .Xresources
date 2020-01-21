@@ -1,4 +1,3 @@
-#include ".cache/wal/colors.Xresources"
-st.font:Overpass Mono:pixelsize=16:antialias=true:autohint=true;
+#inclide ".cache/wal/colors.Xresoures"
+st.font:Liberation Mono:pixelsize:16:antialias=true:autohint=true
 st.alpha: 0.5
-!st.background: #FF0000

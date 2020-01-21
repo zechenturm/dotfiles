@@ -26,4 +26,6 @@ export IDF_PATH="$HOME/esp/esp-idf/"
 #ESP 8266 stuff
 export PATH="$HOME/esp/xtensa-lx106-elf/bin:$PATH"
 
+export EDITOR=nano
+
 neofetch

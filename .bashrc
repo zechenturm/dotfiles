@@ -29,5 +29,6 @@ export IDF_PATH="$HOME/esp/esp-idf/"
 export PATH="$HOME/esp/xtensa-lx106-elf/bin:$PATH"
 
 export EDITOR=nano
+export TERM=st-256color
 
 neofetch

@@ -15,6 +15,7 @@ import XMonad.Hooks.EwmhDesktops
 import XMonad.Util.SpawnOnce
 import XMonad.Util.Run
 import XMonad.Hooks.ManageDocks
+import XMonad.Hooks.DynamicLog
 
 import qualified XMonad.StackSet as W
 import qualified Data.Map        as M
@@ -274,9 +275,18 @@ myStartupHook = do
 
 -- Run xmonad with the settings you specify. No need to modify this.
 --
-main = do
-    xmproc <- spawnPipe "xmobar -A 192 -x 0 /home/moritz/.config/xmobar/xmobar.config"
-    xmonad $ ewmh $ docks $ defaults
+-- main = do
+--     xmproc <- spawnPipe "xmobar -A 192 -x 0 /home/moritz/.config/xmobar/xmobar.config"
+main = xmonad =<< statusBar myBar myPP toggleStrutsKey (ewmh $ docks $ defaults)
+
+-- Command to launch the bar.
+myBar = "xmobar"
+
+-- Custom PP, configure it as you like. It determines what is being written to the bar.
+myPP = xmobarPP { ppCurrent = xmobarColor "#429942" "" . wrap "<" ">" }
+
+-- Key binding to toggle the gap for the bar.
+toggleStrutsKey XConfig {XMonad.modMask = modMask} = (modMask, xK_b)
 
 -- A structure containing your configuration settings, overriding
 -- fields in the default config. Any you don't override, will

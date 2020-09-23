@@ -263,11 +263,11 @@ myLogHook = return ()
 -- By default, do nothing.
 myStartupHook = do
    -- SpawnOnce "echo test > /home/moritz/xmtest1"
-   --SpawnOnce "bash -c 'pidof trayer && killall trayer" -- kill (restart) trayer when restarting xmonad
-   -- spawnOnce "nm-applet &"
-    --spawnOnce "trayer --transparent true --alpha 64 --tint 0x110000  --edge top --align right --distancefrom right --distance 1200 --widthtype pixel --width 50 --expand true --height 22 &"
+    spawnOnce "bash -c 'pidof trayer && killall trayer" -- kill (restart) trayer when restarting xmonad
+    spawnOnce "nm-applet &"
+    spawnOnce "trayer --transparent true --alpha 64 --tint 0x110000  --edge top --align right --distancefrom right --distance 1200 --widthtype pixel --width 50 --expand true --height 22 &"
     spawnOnce "picom &"
-    --spawnOnce "nitrogen --restore &"
+    spawnOnce "nitrogen --restore &"
    -- SpawnOnce "echo test > /home/moritz/xmtest2"
 
 ------------------------------------------------------------------------
